@@ -11,5 +11,13 @@ menuLinks.forEach(link => {
         menu.classList.remove('active');
     });
 }
-
 );
+
+// Mobile sub menu toggle
+let subMenuToggles = document.querySelectorAll('.menu,li');
+subMenuToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(event) {
+        this.children[1].classList.toggle('active');
+        event.stopPropagation(); // Prevent the click from bubbling up to the parent menu
+    });
+});

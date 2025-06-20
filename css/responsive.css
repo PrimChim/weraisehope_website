@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     nav {
         display: none;
     }
@@ -49,6 +49,7 @@
         transition: transform 0.3s ease-in-out;
         transform: translateX(100%);
         z-index: 999;
+        overflow-y: auto;
     }
 
     .menu.active {
@@ -66,21 +67,17 @@
         margin-top: 20px;
     }
 
-    .menu li .button-main {
-        width: 100%;
-        text-align: center;
-        padding: 15px 0;
-        background-color: var(--secondary-color);
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
-
     .menu li a {
         color: #000;
         text-decoration: none;
         padding: 15px 20px;
-        display: block;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu > li > .button-main{
+        color: #fff;
+        justify-content: center;
     }
 
     .closebtn {
@@ -91,6 +88,17 @@
         top: 10px;
         right: 20px;
         text-decoration: none;
+    }
+
+    /* submenu hidden */
+    .mobile-sub-menu {
+        display: none;
+        position: relative;
+        padding: 10px;
+    }
+    
+    .mobile-sub-menu.active{
+        display: block;
     }
 }
 
