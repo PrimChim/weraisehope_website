@@ -1,0 +1,64 @@
+:root{
+    --primary-color: #B1D1C8;
+    --secondary-color: #e65c3b;
+    --text-color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav{
+    /* use darker primary color as background color use with var and multiplier*/
+    background-color: #8FB8A2; /* Darker shade of primary color */
+
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    font-size: 1.25rem;
+    font-weight:400;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    color: #fff;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    background-color: var(--primary-color);
+}
+
+.button-main{
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.logo{
+    height: 50px;
+}
+
+aside{
+    display: none;
+}
+
+aside ul{
+    display: none;
+}
