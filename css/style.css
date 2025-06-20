@@ -1,5 +1,7 @@
 :root{
     --primary-color: #B1D1C8;
+    --primary-color-dark: #8FB8A2; /* Darker shade of primary color */
+    --primary-color-light: #D9E6E0; /* Lighter shade of primary color */
     --secondary-color: #e65c3b;
     --text-color: #fff;
 }
@@ -11,9 +13,7 @@
 }
 
 nav{
-    /* use darker primary color as background color use with var and multiplier*/
-    background-color: #8FB8A2; /* Darker shade of primary color */
-
+    background-color: var(--primary-color-dark); /* Darker shade of primary color */
     color: #fff;
     padding: 10px;
     display: flex;
@@ -61,4 +61,32 @@ aside{
 
 aside ul{
     display: none;
+}
+
+/* sub menu */
+.main-sub-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ nav li:hover .main-sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.main-sub-menu a {
+    padding: 5px 10px;
+    color: #fff;
+    transition: 200ms;
+}
+
+.main-sub-menu a:hover {
+    transform: translateX(10px);
+    text-decoration: none;
+    transition: 200ms;
+    color: #fff;
 }
