@@ -92,13 +92,13 @@
 
     /* submenu hidden */
     .mobile-sub-menu {
-        display: none;
-        position: relative;
-        padding: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
     }
-    
-    .mobile-sub-menu.active{
-        display: block;
+
+    .mobile-sub-menu.active {
+        max-height: 500px;
     }
 }
 
